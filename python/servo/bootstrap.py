@@ -275,6 +275,9 @@ def bootstrap(context, force=False):
             bootstrapper = salt
 
     if bootstrapper is None:
+        print(platform.system())
+        print(platform.machine())
+        print(platform.linux_distribution())
         print('Bootstrap support is not yet available for your OS.')
         return 1
 
